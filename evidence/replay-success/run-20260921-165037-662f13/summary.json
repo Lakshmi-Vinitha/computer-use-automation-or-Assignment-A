@@ -1,0 +1,11 @@
+{
+  "status": "SUCCESS",
+  "capability_id": "member_balance_lookup",
+  "business_code": null,
+  "outputs": {
+    "savings_balance": "$12,450.00"
+  },
+  "error": null,
+  "execution_time_seconds": 0.4938387870788574,
+  "evidence_dir": "evidence/replay-success/run-20260921-165037-662f13"
+}

@@ -1,0 +1,171 @@
+{
+  "artifact_id": "member_balance_lookup",
+  "name": "Member Savings Balance Lookup & Servicing",
+  "version": "1.0.0",
+  "description": "test",
+  "target_app": "http://127.0.0.1:8012",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "member_id": {
+        "type": "string",
+        "description": "5-digit member account ID",
+        "default": "12345"
+      }
+    },
+    "required": [
+      "member_id"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "savings_balance": {
+        "type": "string",
+        "description": "Extracted savings balance"
+      },
+      "status": {
+        "type": "string",
+        "description": "Execution outcome status"
+      }
+    }
+  },
+  "steps": [
+    {
+      "step_id": "step_1",
+      "action": {
+        "action_type": "type",
+        "locator": {
+          "role_name": null,
+          "label": "MEMBER ID NUM:",
+          "text": null,
+          "css": "#member_id_input",
+          "xpath": null
+        },
+        "value": "12345",
+        "description": "Type member ID 12345"
+      },
+      "target": {
+        "role_name": null,
+        "label": "MEMBER ID NUM:",
+        "text": null,
+        "css": "#member_id_input",
+        "xpath": null
+      },
+      "input_reference": "{{member_id}}",
+      "expected_state": "State post Type member ID 12345",
+      "timeout_ms": 5000,
+      "retry_policy": {
+        "max_retries": 2,
+        "backoff_ms": 1000,
+        "recoverable_categories": [
+          "TRANSIENT_LOAD_ERROR",
+          "UNEXPECTED_DIALOG"
+        ]
+      },
+      "output_key": null
+    },
+    {
+      "step_id": "step_2",
+      "action": {
+        "action_type": "click",
+        "locator": {
+          "role_name": {
+            "role": "button",
+            "name": "EXECUTE SEARCH PROTOCOL"
+          },
+          "label": null,
+          "text": "EXECUTE SEARCH PROTOCOL",
+          "css": "input[type='submit']",
+          "xpath": null
+        },
+        "value": null,
+        "description": "Click search submit button"
+      },
+      "target": {
+        "role_name": {
+          "role": "button",
+          "name": "EXECUTE SEARCH PROTOCOL"
+        },
+        "label": null,
+        "text": "EXECUTE SEARCH PROTOCOL",
+        "css": "input[type='submit']",
+        "xpath": null
+      },
+      "input_reference": null,
+      "expected_state": "State post Click search submit button",
+      "timeout_ms": 5000,
+      "retry_policy": {
+        "max_retries": 2,
+        "backoff_ms": 1000,
+        "recoverable_categories": [
+          "TRANSIENT_LOAD_ERROR",
+          "UNEXPECTED_DIALOG"
+        ]
+      },
+      "output_key": null
+    },
+    {
+      "step_id": "step_3",
+      "action": {
+        "action_type": "extract",
+        "locator": {
+          "role_name": null,
+          "label": null,
+          "text": null,
+          "css": "#savings-balance",
+          "xpath": null
+        },
+        "value": "savings_balance",
+        "description": "Extract savings balance"
+      },
+      "target": {
+        "role_name": null,
+        "label": null,
+        "text": null,
+        "css": "#savings-balance",
+        "xpath": null
+      },
+      "input_reference": null,
+      "expected_state": "State post Extract savings balance",
+      "timeout_ms": 5000,
+      "retry_policy": {
+        "max_retries": 2,
+        "backoff_ms": 1000,
+        "recoverable_categories": [
+          "TRANSIENT_LOAD_ERROR",
+          "UNEXPECTED_DIALOG"
+        ]
+      },
+      "output_key": "savings_balance"
+    }
+  ],
+  "checkpoint": {
+    "condition_type": "text_present",
+    "value": "SAVINGS ACCOUNT",
+    "extract_key": null
+  },
+  "safety_policy": {
+    "allowed_domains": [
+      "localhost",
+      "127.0.0.1"
+    ],
+    "allowed_routes": [
+      "*"
+    ],
+    "blocked_action_types": [],
+    "max_steps_per_run": 15,
+    "risk_classification": {
+      "navigate": "SAFE",
+      "click": "SAFE",
+      "type": "SAFE",
+      "extract": "SAFE",
+      "wait": "SAFE",
+      "finish": "SAFE",
+      "escalate": "SAFE",
+      "submit_transaction": "IRREVERSIBLE",
+      "delete_account": "IRREVERSIBLE"
+    }
+  },
+  "created_at": "2026-09-21T20:46:34.969052+00:00"
+}

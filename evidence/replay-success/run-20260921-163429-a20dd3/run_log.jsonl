@@ -1,0 +1,5 @@
+{"timestamp": "2026-09-21T20:34:29.503900Z", "event_type": "STEP_EXECUTION", "data": {"step": "REPLAY_START", "details": {"artifact_id": "member_balance_lookup", "parameters": {"member_id": "99999"}}}}
+{"timestamp": "2026-09-21T20:34:29.504075Z", "event_type": "STEP_EXECUTION", "data": {"step": "REPLAY_INITIAL_NAVIGATE", "details": {"url": "http://127.0.0.1:8005"}}}
+{"timestamp": "2026-09-21T20:34:29.512153Z", "event_type": "STEP_EXECUTION", "data": {"step": "STEP_1_START", "details": {"step_id": "step_1", "action_type": "type", "description": "Type member ID 12345"}}}
+{"timestamp": "2026-09-21T20:34:29.556234Z", "event_type": "STEP_EXECUTION", "data": {"step": "STEP_2_START", "details": {"step_id": "step_2", "action_type": "click", "description": "Click search submit button"}}}
+{"timestamp": "2026-09-21T20:34:29.630847Z", "event_type": "STEP_EXECUTION", "data": {"step": "STEP_3_START", "details": {"step_id": "step_3", "action_type": "extract", "description": "Extract savings balance"}}}

@@ -1,0 +1,4 @@
+{"timestamp": "2026-09-21T20:49:10.558046Z", "event_type": "STEP_EXECUTION", "data": {"step": "REPLAY_START", "details": {"artifact_id": "member_balance_lookup", "parameters": {"member_id": "99999"}}}}
+{"timestamp": "2026-09-21T20:49:10.558307Z", "event_type": "STEP_EXECUTION", "data": {"step": "REPLAY_INITIAL_NAVIGATE", "details": {"url": "http://127.0.0.1:8005"}}}
+{"timestamp": "2026-09-21T20:49:10.566957Z", "event_type": "STEP_EXECUTION", "data": {"step": "STEP_1_START", "details": {"step_id": "step_1", "action_type": "type", "description": "Type member ID 12345"}}}
+{"timestamp": "2026-09-21T20:49:10.613540Z", "event_type": "STEP_EXECUTION", "data": {"step": "STEP_2_START", "details": {"step_id": "step_2", "action_type": "click", "description": "Click search submit button"}}}

@@ -1,0 +1,11 @@
+{
+  "status": "BUSINESS_OUTCOME",
+  "capability_id": "member_balance_lookup",
+  "business_code": "MEMBER_NOT_FOUND",
+  "outputs": {
+    "message": "Member record not found in database"
+  },
+  "error": null,
+  "execution_time_seconds": 0.43963098526000977,
+  "evidence_dir": "evidence/replay-success/run-20260921-165206-258202"
+}

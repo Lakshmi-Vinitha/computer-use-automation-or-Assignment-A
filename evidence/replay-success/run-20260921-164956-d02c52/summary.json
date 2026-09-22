@@ -1,0 +1,11 @@
+{
+  "status": "BUSINESS_OUTCOME",
+  "capability_id": "member_balance_lookup",
+  "business_code": "PERMISSION_DENIED",
+  "outputs": {
+    "message": "Access level insufficient to view restricted account"
+  },
+  "error": null,
+  "execution_time_seconds": 0.4855308532714844,
+  "evidence_dir": "evidence/replay-success/run-20260921-164956-d02c52"
+}

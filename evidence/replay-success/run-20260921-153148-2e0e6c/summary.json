@@ -1,0 +1,17 @@
+{
+  "status": "HARD_FAILURE",
+  "capability_id": "member_balance_lookup",
+  "business_code": null,
+  "outputs": {},
+  "error": {
+    "step_id": "step_1",
+    "step_index": 1,
+    "expected_state": "State post Type member ID 12345",
+    "observed_state": "Failed to execute type",
+    "error_category": "ELEMENT_NOT_FOUND",
+    "message": "Element locator role_name=None label='MEMBER ID NUM:' text=None css='#member_id_input' xpath=None could not be interacted with",
+    "screenshot_path": "evidence/replay-success/run-20260921-153148-2e0e6c/screenshots/failure_step_1.png"
+  },
+  "execution_time_seconds": 17.39674711227417,
+  "evidence_dir": "evidence/replay-success/run-20260921-153148-2e0e6c"
+}
